@@ -66,6 +66,7 @@ def fetch_and_store_fixtures():
 def home():
     return render_template('index.html')
 
+
 @app.route('/api/fixtures')
 def fixtures_api():
     conn = mysql.connector.connect(**db_config)
