@@ -7,9 +7,9 @@ app = Flask(__name__)
 # Database configuration
 db_config = {
     'host': 'localhost',
-    'user': 'your_mysql_user',
-    'password': 'your_mysql_password',
-    'database': 'odds'
+    'user': 'rootr',
+    'password': 'root',
+    'database': 'epl_fixtures'
 }
 
 # RapidAPI headers
@@ -34,6 +34,7 @@ def fetch_and_store_fixtures():
 
     conn = mysql.connector.connect(**db_config)
     cursor = conn.cursor()
+    
 
     for item in fixtures:
         fixture = item['fixture']
